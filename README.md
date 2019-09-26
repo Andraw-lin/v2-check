@@ -31,11 +31,7 @@ Then you can use the `check-item` and the `check-all`  directive on your compone
   <section class="form-container" v-check-all="initFormData.uuid">
     <div>
       Text option:
-			<input 
-				type="text"
-				:class="{'error-input': $getFormItemMessage(initFormData.uuid, initFormData.textOption.name)}"
-				v-check-item="initFormData.textOption"
-				v-model="initFormData.textOption.value" />
+			<input type="text" :class="{'error-input': $getFormItemMessage(initFormData.uuid, initFormData.textOption.name)}" v-check-item="initFormData.textOption" v-model="initFormData.textOption.value" />
       <span class="error-msg" v-show="initFormStatus">{{ $getFormItemMessage(initFormData.uuid, initFormData.textOption.name) }}</span>
     </div>
   </section>
